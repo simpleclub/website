@@ -1,0 +1,72 @@
+// Importing from a subfolder
+// @import 'components/buttons';
+
+// Importing from a different folder
+// @import '../assets/variables';
+
+
+
+
+// /***********************************************
+//   Spacer styles tablet
+// ***********************************************/
+// @media screen and (max-width: 991px) {
+//   :root {
+//     --spacing--spacer-12: var(--size--4);
+//     --spacing--spacer-13: var(--size--5);
+//   }
+// }
+
+// /***********************************************
+//   Spacer styles mobile landscape
+// ***********************************************/
+// @media screen and (max-width: 767px) {
+//   :root {
+//     --spacing--spacer-4: var(--size--0-75);
+//     --spacing--spacer-5: var(--size--1);
+//     --spacing--spacer-6: var(--size--1-5);
+//     --spacing--spacer-7: var(--size--1-63);
+//     --spacing--spacer-8: var(--size--1-5);
+//     --spacing--spacer-9: var(--size--2-5);
+//     --spacing--spacer-10: var(--size--3);
+//     --spacing--spacer-11: var(--size--3-5);
+//     --spacing--spacer-12: var(--size--4);
+//     --spacing--spacer-13: var(--size--4);
+//   }
+// }
+
+
+/***********************************************
+  section styles
+***********************************************/
+main section, header, footer {
+    position: relative;
+}
+
+/***********************************************
+  remove scroll bounce
+***********************************************/
+body { overscroll-behavior: none; }
+
+
+/***********************************************
+  container styles
+***********************************************/
+.w-container {
+  container-type: inline-size;
+}
+
+
+/***********************************************
+  disable ios showing play button on autoplay videos
+***********************************************/
+[background-animation]::-webkit-media-controls {
+  display:none !important;
+}
+
+[background-animation]::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+
