@@ -1,0 +1,8 @@
+@keyframes hero-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 4.5rem)); /* match gap in the element */
+  }
+}

@@ -1,0 +1,24 @@
+.home-testimonial_tabs-pill{
+  &:hover{
+    .home-testimonial_tabs-pill-line{
+      max-width: 150px;
+    }
+  }  
+}
+
+.home-testimonial_slider-card{
+  .home-testimonial_slider-card_content_info{
+    max-height: 0px;
+    & *{
+      opacity: 0;
+      transition: opacity 1s;
+    }
+  }
+
+  &:hover .home-testimonial_slider-card_content_info{
+    max-height: 500px;
+    & * {
+      opacity: 1;
+    }
+  }
+}
