@@ -1,9 +1,15 @@
 .home-testimonial_tabs-pill{
   &:hover{
     .home-testimonial_tabs-pill-line{
-      max-width: 150px;
+      max-width: 180px;
     }
   }  
+}
+
+.active-tab{
+  .home-testimonial_tabs-pill-line{
+    max-width: 180px;
+  }
 }
 
 .home-testimonial_slider-card{
@@ -12,6 +18,12 @@
     & *{
       opacity: 0;
       transition: opacity 1s;
+    }
+    @media screen and (max-width: 991px){
+      max-height: none;
+      & *{
+        opacity: 1;
+      }
     }
   }
 

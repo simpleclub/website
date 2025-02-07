@@ -21,7 +21,7 @@ function animateNumbers(el) {
     duration: 2,
     ease: "power1.out",
     onUpdate: function () {
-      el.textContent = `${formatNumber(Math.round(obj.value))} +`;
+      el.textContent = `${formatNumber(Math.round(obj.value))} %`;
     }
   });
 }
@@ -31,7 +31,7 @@ function formatNumber(num) {
 }
 
 // Apply ScrollTrigger to all elements
-document.querySelectorAll(".home-future_numbers-text").forEach((el) => {
+document.querySelectorAll(".home-study_card-numbers").forEach((el) => {
   ScrollTrigger.create({
     trigger: el,
     start: "top 95%",
