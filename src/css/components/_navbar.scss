@@ -1,0 +1,72 @@
+.nav_top-link{
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -9px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 6px 6px 0 0;
+    max-width: 0px;
+    transition: all 0.2s ease;
+    width: 100%;
+  } 
+
+  &:hover:after {
+    max-width: 100px;
+  }
+}
+
+.nav-menu_dropdown{
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -9px;
+    height: 2px;
+    background-color: #0059D6;
+    border-radius: 6px 6px 0 0;
+    max-width: 0px;
+    transition: all 0.2s ease;
+    width: 100%;
+  } 
+
+  &:hover:after {
+    max-width: 100px;
+  }
+}
+
+.nav_drop{
+  .lernmanagement-card{
+    position: relative;
+    background: #0D161C;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    border: solid 2px transparent; 
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -2px;
+      border-radius: inherit; 
+      background: linear-gradient(157deg, #171F25, #F64AFF);
+    }
+  }
+  .lernerlebnis-card{
+    position: relative;
+    background: #0D161C;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    border: solid 2px transparent; 
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -2px;
+      border-radius: inherit; 
+      background: linear-gradient(157deg, #171F25, #4ADEFF);
+    }
+  }
+}

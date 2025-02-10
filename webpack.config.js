@@ -8,6 +8,7 @@ module.exports = {
   entry: {
     main: { import: './src/js/main.js' },
     home: { import: './src/js/home.js' },
+    jetztBeratenLassen: { import: './src/js/jetztBeratenLassen.js' },
   }, 
   output: {
     clean: true,
