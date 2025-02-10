@@ -64,11 +64,7 @@ if (azubisNumber) {
 
 
 // prevent form submition when enter key is pressed
-const form = document.querySelector(".calculator_slider_value_form"); // Select your form
-
-form.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    event.preventDefault(); // Prevent form submission when Enter is pressed
-  }
+$('.calculator_slider_value_form').submit(function() {
+  return false;
 });
 
