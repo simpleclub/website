@@ -12,25 +12,26 @@
   }
 }
 
-.home-testimonial_slider-card{
-  .home-testimonial_slider-card_content_info{
-    max-height: 0px;
-    & *{
-      opacity: 0;
-      transition: opacity 1s;
-    }
-    @media screen and (max-width: 991px){
-      max-height: none;
-      & *{
-        opacity: 1;
-      }
-    }
-  }
+// show testimonial only on hover
+// .home-testimonial_slider-card{
+//   .home-testimonial_slider-card_content_info{
+//     max-height: 0px;
+//     & *{
+//       opacity: 0;
+//       transition: opacity 1s;
+//     }
+//     @media screen and (max-width: 991px){
+//       max-height: none;
+//       & *{
+//         opacity: 1;
+//       }
+//     }
+//   }
 
-  &:hover .home-testimonial_slider-card_content_info{
-    max-height: 500px;
-    & * {
-      opacity: 1;
-    }
-  }
-}
+//   &:hover .home-testimonial_slider-card_content_info{
+//     max-height: 500px;
+//     & * {
+//       opacity: 1;
+//     }
+//   }
+// }
