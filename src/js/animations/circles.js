@@ -26,7 +26,7 @@ const createAnimations = () => {
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".circles",
-        start: "bottom 80%", // Starts when the bottom of `.circles` is at 80% of the viewport height
+        start: "top 85%", // Starts when the bottom of `.circles` is at 80% of the viewport height
         once: true, // Ensures the animation runs only once
       },
     }
@@ -43,7 +43,7 @@ const createAnimations = () => {
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".circles",
-        start: "bottom 80%",
+        start: "top 85%",
         once: true,
       },
     }
@@ -59,7 +59,7 @@ const createAnimations = () => {
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".circles",
-        start: "bottom 80%",
+        start: "top 85%",
         once: true,
       },
     }
