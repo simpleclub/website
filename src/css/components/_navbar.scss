@@ -17,26 +17,56 @@
   }
 }
 
+// main menu blue line that shows up bellow main link when hovered
 .nav-menu_dropdown{
   &:after{
     content: '';
     position: absolute;
-    left: 0px;
-    bottom: -9px;
+    left: 10%;
+    bottom: 0px;
     height: 2px;
     background-color: #0059D6;
     border-radius: 6px 6px 0 0;
     max-width: 0px;
     transition: all 0.2s ease;
-    width: 100%;
+    width: 80%;
   } 
 
-  &:hover:after {
-    max-width: 100px;
+  &:hover{
+    .nav-menu_dropdown-text{
+      color: #fff;
+    }
   }
+
+  &:hover:after {
+    @media screen and (min-width: 992px){
+      max-width: 100px;
+    }
+  }
+
+
+  &:before{
+    content: '';
+    position: absolute;
+    display: none;
+    width: 130%;
+    left: -15%;
+    top: 60px;
+    height: 100%;
+    right: auto;
+  } 
+
+
+  &:hover:before {
+    @media screen and (min-width: 992px){
+      display: block;
+    } 
+  }
+
 }
 
 .nav_drop{
+  // dropdown cards border linear gradient
   .lernmanagement-card{
     position: relative;
     background: #0D161C;
@@ -69,4 +99,204 @@
       background: linear-gradient(157deg, #171F25, #4ADEFF);
     }
   }
+
+  // hover for dropdown links
+  .nav_drop_produkt_card{
+    &:hover{
+      .nav_drop-subheading{
+        color: #fff;
+      }
+      .nav_drop_arrow-link-block-text{
+        color: #fff;
+      }
+      .nav_drop_arrow-link-block{
+        gap: 10px;
+      }
+      .nav_drop_arrow-link-block-arrow path {
+        fill: #fff;
+      }
+    }
+  }
+
+  .nav_drop_produkt-left_wrap_right_block{
+    &:hover{
+      .nav_drop-subheading{
+        color: #fff;
+      }
+      .nav_drop_produkt-left_wrap_right_block-arrow{
+        transform: translate(5px, -50%);
+        path{
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  .lernmanagement-card_inner{
+    &:hover {
+      .nav_drop-subheading{
+        color: #fff;
+      }
+      .nav_drop_arrow-link-block{
+        gap: 10px;
+      }
+      .nav_drop_arrow-link-block-text{
+        color: #fff;
+      }
+      .nav_drop_arrow-link-block-arrow{
+        path{
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  .lernerlebnis-card_inner{
+    &:hover {
+      .nav_drop-subheading{
+        color: #fff;
+      }
+      .nav_drop_arrow-link-block{
+        gap: 10px;
+      }
+      .nav_drop_arrow-link-block-text{
+        color: #fff;
+      }
+      .nav_drop_arrow-link-block-arrow{
+        path{
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  .nac_drop_product_cta{
+    &:hover {
+      .nac_drop_product_cta-arrow{
+        transform: translate(5px, -50%);
+        path{
+          fill: #fff;
+        }
+      }
+      .nac_drop_product_cta-icon{
+        path {
+          stroke: #fff;
+        }
+      }
+      .nav_drop_product_cta_text-large{
+        color: #fff;
+      }
+    }
+  }
+
+  .nav_drop_los_block{
+    path{
+      transition: all 0.2s ease;
+    }
+    &:hover{
+      .nav_drop_los_block-text{
+        color: #fff;
+      }
+      .nav_drop_los_block-icon{
+        path{
+          stroke: #fff;
+        }
+      }
+      .nav_drop_los_block_arrow{
+        transform: translate(5px, -50%);
+        path{
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  .ress_drop_inner-col_block{
+    path{
+      transition: all 0.2s ease;
+    }
+   
+    &:hover{
+      .ress_drop_inner-col_block-heading{
+        color: #fff;
+      }
+      .ress_drop_inner-col_block-icon{
+        path{
+          stroke: #fff;
+        }
+      }
+      .ress_drop_inner-col_block-arrow{
+        transform: translate(5px, -50%);
+        path{
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
+
+.hamburger-btn{
+  .hamburger-btn_line-top,
+  .hamburger-btn_line-midle,
+  .hamburger-btn_line-botom{
+    transition: all 0.2s ease;
+  }
+  &.w--open{
+    background-color: transparent !important;
+    .hamburger-btn_line-midle{
+      opacity: 0;
+    }
+    .hamburger-btn_line-top{
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger-btn_line-botom{
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}
+
+// tablet menu
+.w-nav-overlay{
+  z-index: 300 !important;
+  top: 40px !important;
+  background-color: #0D161C;
+  width:  400px !important;
+  left: auto;
+  height: calc(100vh - 40px);
+  @media screen and (max-width: 479px){
+    width: 100vw  !important;
+  }
+  .nav-menu{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    display: flex !important;
+    gap: 0px;
+    flex-direction: column;
+  }
+}
+
+.w-nav-overlay{
+  overflow: hidden;
+  height: calc(100vh - 40px) !important;
+}
+
+.nav_drop_los_block{
+  @media screen and (max-width: 991px){
+    svg path{
+      stroke: #fff;
+    }
+    .nav_drop_los_block-text{
+      color: #fff;
+    }
+  }
+}
+
+.nav-menu{
+  @media screen and (max-width: 991px){
+    .nav-menu_dropdown-arrow path{
+      stroke: #B3CBDB;
+    }
+  }
+  
 }

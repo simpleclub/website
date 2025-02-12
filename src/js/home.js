@@ -5,6 +5,7 @@ import '../css/home.scss'
 
 // JavaScript import
 // components
+import './components/navbar.js'
 import './components/homeLackVideo.js'
 // import './components/homeFutureSlider.js'
 // import './components/homeFutureRive.js'
