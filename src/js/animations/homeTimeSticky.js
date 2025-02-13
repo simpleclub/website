@@ -20,8 +20,18 @@ function animateContentBlocks() {
         gsap.to(images[index], { opacity: 1, duration: 0.6, ease: "power2.out" }); // Show only current image
         gsap.to(block, { opacity: 1, duration: 0.6, ease: "power2.out" }); // Fade in right block
       },
+      onEnterBack: () => {
+        gsap.to(images, { opacity: 0, duration: 0.3, ease: "power1.out" }); // Hide all images
+        gsap.to(images[index], { opacity: 1, duration: 0.6, ease: "power2.out" }); // Show only current image when scrolling up
+        gsap.to(block, { opacity: 1, duration: 0.6, ease: "power2.out" }); // Fade in right block
+      },
+      onLeave: () => {
+        gsap.to(images[index], { opacity: 0, duration: 0.3, ease: "power1.out" }); // Hide image when leaving downward
+        gsap.to(block, { opacity: 0.5, duration: 0.6, ease: "power2.out" }); // Optionally reduce opacity
+      },
       onLeaveBack: () => {
-        gsap.to(images, { opacity: 0, duration: 0.3, ease: "power1.out" }); // Hide all images when scrolling up
+        gsap.to(images[index], { opacity: 0, duration: 0.3, ease: "power1.out" }); // Hide image when leaving upward
+        gsap.to(block, { opacity: 0.5, duration: 0.6, ease: "power2.out" }); // Optionally reduce opacity
       }
     });
   });
