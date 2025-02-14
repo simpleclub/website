@@ -1,8 +1,49 @@
 // Importing from a subfolder
-@import 'components/navbar';
+// @import 'components/navbar';
 
 
 // Importing from a different folder
 // @import '../assets/variables';
+
+
+.hs-form{
+  .hs-form-field{
+    border-radius: 8px;
+    border: 2px solid #E4E4E4;
+    background: #FFF;
+    backdrop-filter: blur(20px);
+    padding: 16px 12px;
+    label{
+      font-size: 12px;
+      font-weight: 800;
+      border-bottom: 16px;
+    }
+  }
+  /* Target all select fields in HubSpot forms */
+  select {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-color: #fff;
+    font-size: 14px;
+    color: #3D4449;
+    cursor: pointer;
+
+    transition: border-color 0.3s;
+
+    &:focus {
+      // border-color: #0059D6;
+      outline: none;
+    }
+
+    option {
+      padding: 10px;
+      color: #fff;
+    }
+  }
+
+}
+
 
 

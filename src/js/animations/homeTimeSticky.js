@@ -13,28 +13,45 @@ function animateContentBlocks() {
   rightBlocks.forEach((block, index) => {
     ScrollTrigger.create({
       trigger: block,
-      start: "top 50%", // Trigger when top of block reaches 50% of viewport
+      start: "top 50%",
       end: "bottom 50%",
       onEnter: () => {
-        gsap.to(images, { opacity: 0, duration: 0.3, ease: "power1.out" }); // Hide all images
-        gsap.to(images[index], { opacity: 1, duration: 0.6, ease: "power2.out" }); // Show only current image
-        gsap.to(block, { opacity: 1, duration: 0.6, ease: "power2.out" }); // Fade in right block
+        gsap.to(images, { opacity: 0, duration: 0.3, ease: "power1.out" });
+        gsap.to(images[index], { opacity: 1, duration: 0.6, ease: "power2.out" });
+        gsap.to(block, { opacity: 1, duration: 0.6, ease: "power2.out" });
       },
       onEnterBack: () => {
-        gsap.to(images, { opacity: 0, duration: 0.3, ease: "power1.out" }); // Hide all images
-        gsap.to(images[index], { opacity: 1, duration: 0.6, ease: "power2.out" }); // Show only current image when scrolling up
-        gsap.to(block, { opacity: 1, duration: 0.6, ease: "power2.out" }); // Fade in right block
+        gsap.to(images, { opacity: 0, duration: 0.3, ease: "power1.out" });
+        gsap.to(images[index], { opacity: 1, duration: 0.6, ease: "power2.out" });
+        gsap.to(block, { opacity: 1, duration: 0.6, ease: "power2.out" });
       },
       onLeave: () => {
-        gsap.to(images[index], { opacity: 0, duration: 0.3, ease: "power1.out" }); // Hide image when leaving downward
-        gsap.to(block, { opacity: 0.5, duration: 0.6, ease: "power2.out" }); // Optionally reduce opacity
+        gsap.to(images[index], { opacity: 0, duration: 0.3, ease: "power1.out" });
+        gsap.to(block, { opacity: 0.5, duration: 0.6, ease: "power2.out" });
       },
       onLeaveBack: () => {
-        gsap.to(images[index], { opacity: 0, duration: 0.3, ease: "power1.out" }); // Hide image when leaving upward
-        gsap.to(block, { opacity: 0.5, duration: 0.6, ease: "power2.out" }); // Optionally reduce opacity
+        gsap.to(images[index], { opacity: 0, duration: 0.3, ease: "power1.out" });
+        gsap.to(block, { opacity: 0.5, duration: 0.6, ease: "power2.out" });
       }
     });
   });
 }
 
-animateContentBlocks();
+let resizeTimeout;
+
+function checkScreenSize() {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    if (window.innerWidth > 767) {
+      animateContentBlocks();
+    } else {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    }
+  }, 300);
+}
+
+// Initial check
+checkScreenSize();
+
+// Re-check on window resize
+window.addEventListener("resize", checkScreenSize);

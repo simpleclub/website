@@ -9,7 +9,7 @@ import './components/homeLackVideo.js'
 // import './components/homeFutureSlider.js'
 // import './components/homeFutureRive.js'
 import './components/homeApprenticeAccordion.js'
-import './components/homeTestimonialSlider.js'
+import './components/testimonialSlider.js'
 import './components/roiCalculator.js'
 
 
