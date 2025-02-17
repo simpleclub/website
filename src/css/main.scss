@@ -81,6 +81,6 @@ body { overscroll-behavior: none; }
   adding smooth scroll + anchor scroll offset
 ***********************************************/
 html {
-  scroll-padding-top: 4rem;
+  scroll-padding-top: 120px;
   scroll-behavior: smooth;
 }
