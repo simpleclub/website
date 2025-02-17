@@ -43,3 +43,10 @@ $('img').each(function(){
 	$(this).removeAttr('srcset');
 });
 
+
+/////////////////////////////////////////
+// Disable webflow smooth scroll so we can use scroll-margin-top on acnhor links
+////////////////////////////////////////
+$(function() {
+	$(document).off('click.wf-scroll');
+});

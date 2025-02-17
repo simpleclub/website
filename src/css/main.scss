@@ -76,3 +76,11 @@ body { overscroll-behavior: none; }
     display: inline; /* Keeps the content inline */
   }
 }
+
+/***********************************************
+  adding smooth scroll + anchor scroll offset
+***********************************************/
+html {
+  scroll-padding-top: 4rem;
+  scroll-behavior: smooth;
+}
