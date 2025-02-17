@@ -4,6 +4,7 @@ import '../css/main.scss'
 
 // JavaScript import
 import './components/navbar.js'
+import './components/wistiaVideos.js'
 
 
 /////////////////////////////////////////

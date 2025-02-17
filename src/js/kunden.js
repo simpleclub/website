@@ -5,3 +5,6 @@ import '../css/kunden.scss'
 import './components/kundenTestimonials.js'
 import './components/kundenPosts.js'
 import './components/kundenVideoSlider.js'
+
+
+
