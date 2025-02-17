@@ -1,6 +1,6 @@
 
 var blogPostsContainer = document.querySelector(".kun-posts_list");
-var blogPosts = blogPostsContainer.querySelectorAll(".kun-posts_card");
+var blogPosts = blogPostsContainer.querySelectorAll(".kun-post_card-item");
 var showMoreBtn = document.querySelector(".kun-posts_show-more");
 var visiblePosts = 2; // Number of initially visible blog posts
 
