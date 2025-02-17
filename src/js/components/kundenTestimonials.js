@@ -6,6 +6,7 @@ if (button && rightElement) {
   button.addEventListener("click", function () {
     rightElement.style.display = "flex";
     rightElement.style.opacity = "1";
+    button.style.display = "none";
   });
 }
 
