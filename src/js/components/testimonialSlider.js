@@ -25,8 +25,8 @@ if (sliders.length > 0) {
         },
       },
       navigation: {
-        nextEl: ".testimonial_slider-next",
-        prevEl: ".testimonial_slider-prev",
+        nextEl: ".testimonials_slider-next",
+        prevEl: ".testimonials_slider-prev",
       },
     });
   });

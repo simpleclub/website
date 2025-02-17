@@ -9,6 +9,8 @@ module.exports = {
     main: { import: './src/js/main.js' },
     home: { import: './src/js/home.js' },
     jetztBeratenLassen: { import: './src/js/jetztBeratenLassen.js' },
+    kunden: { import: './src/js/kunden.js' },
+    kundenSingle: { import: './src/js/kundenSingle.js' },
   }, 
   output: {
     clean: true,
