@@ -1,0 +1,33 @@
+// .aus-hero_block {
+//   opacity: 0; /* Start fully transparent */
+// }
+
+
+
+// @keyframes fadeInUp {
+//   from {
+//       opacity: 0;
+//       transform: translateY(30px);
+//   }
+//   to {
+//       opacity: 1;
+//       transform: translateY(0);
+//   }
+// }
+
+.aus-hero_block {
+  opacity: 0;
+  transform: translateX(-100px) rotateY(30deg) scale(1.2);  
+  animation: fadeInLeftAngled 0.8s ease-out forwards;
+}
+
+@keyframes fadeInLeftAngled {
+  from {
+      opacity: 0;
+      transform: translateX(-100px) rotateY(30deg) scale(1.2); /* Starts further left & angled */
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0) rotateY(0) scale(1); /* Moves into normal position */
+  }
+}

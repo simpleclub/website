@@ -11,6 +11,7 @@ module.exports = {
     jetztBeratenLassen: { import: './src/js/jetztBeratenLassen.js' },
     kunden: { import: './src/js/kunden.js' },
     kundenSingle: { import: './src/js/kundenSingle.js' },
+    ausbildungsberufe: { import: './src/js/ausbildungsberufe.js' },
   }, 
   output: {
     clean: true,
