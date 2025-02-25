@@ -13,6 +13,7 @@ module.exports = {
     kundenSingle: { import: './src/js/kundenSingle.js' },
     ausbildungsberufe: { import: './src/js/ausbildungsberufe.js' },
     lernmanagement: { import: './src/js/lernmanagement.js' },
+    lernerlebnis: { import: './src/js/lernerlebnis.js' },
   }, 
   output: {
     clean: true,
