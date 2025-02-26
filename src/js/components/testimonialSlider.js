@@ -10,18 +10,28 @@ import "swiper/css/navigation";
 // Select all testimonial sliders
 const sliders = document.querySelectorAll(".testimonial_slider");
 
-// Check if sliders exist before initializing Swiper
+
 if (sliders.length > 0) {
   sliders.forEach((slider) => {
+    
+    // Check if the slider has the necessary Swiper structure
+    const wrapper = slider.querySelector(".swiper-wrapper");
+    const slides = slider.querySelectorAll(".swiper-slide");
+
+    if (!wrapper || slides.length === 0) {
+      console.warn("Swiper structure is missing in:", slider);
+      return; // Skip initializing Swiper for this slider
+    }
+
     new Swiper(slider, {
       modules: [Navigation],
       loop: true,
       slidesPerView: "auto",
       spaceBetween: 40,
-      centeredSlides: window.innerWidth <= 767, // Only center when screen is ≤ 767px
+      centeredSlides: window.innerWidth <= 767,
       breakpoints: {
         768: {
-          centeredSlides: false, // Disable centering on larger screens
+          centeredSlides: false,
         },
       },
       navigation: {
@@ -31,6 +41,7 @@ if (sliders.length > 0) {
     });
   });
 }
+
 
 // Handling Tab Clicks
 const tabs = document.querySelectorAll(".testimonial_tabs-pill");
