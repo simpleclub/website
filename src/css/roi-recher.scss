@@ -1,0 +1,14 @@
+.roi-all_heading-title_blue-background{
+  position: relative;
+  color: #fff;
+  &:after{
+    position: absolute;
+    width: 104%;
+    height: 100%;
+    top: 0px;
+    left: -2%;
+    content: '';
+    background-color: #2662d9;
+    z-index: -1;
+  }
+}

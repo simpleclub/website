@@ -1,0 +1,29 @@
+.section_rio-all{
+  .roi-all_info_top_content,
+  .roi-all_info_accordion_answer{
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    max-height: 0px;
+    overflow: hidden;
+  } 
+
+  .roi-all_info_heading-arrow,
+  .roi-all_info_accordion_question_right-arrow {
+    transition: 0.2s;
+  }
+
+  .open{
+    .roi-all_info_heading-arrow,
+    .roi-all_info_accordion_question_right-arrow {
+      transform: rotate(0);
+    }
+    .roi-all_info_accordion_answer { 
+      max-height: 1000px;
+      transition: max-height 1s ease-in-out;
+    }
+    .roi-all_info_top_content{
+      max-height: 1000px;
+      transition: max-height 1s ease-in-out;
+    }
+  }
+
+}
