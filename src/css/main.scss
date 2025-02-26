@@ -84,3 +84,7 @@ html {
   scroll-padding-top: 120px;
   scroll-behavior: smooth;
 }
+
+html.w-editor:after{
+  display: none !important;
+}
