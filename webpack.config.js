@@ -14,7 +14,7 @@ module.exports = {
     ausbildungsberufe: { import: './src/js/ausbildungsberufe.js' },
     lernmanagement: { import: './src/js/lernmanagement.js' },
     lernerlebnis: { import: './src/js/lernerlebnis.js' },
-    roiRecher: { import: './src/js/roiRecher.js' },
+    roiRechner: { import: './src/js/roiRechner.js' },
   }, 
   output: {
     clean: true,

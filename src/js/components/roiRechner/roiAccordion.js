@@ -1,5 +1,5 @@
 // CSS import
-import '../../../css/components/roiRecher/_roi-accordion.scss'
+import '../../../css/components/roiRechner/_roi-accordion.scss'
 
 console.log('aaa');
 
