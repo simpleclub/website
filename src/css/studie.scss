@@ -1,0 +1,59 @@
+
+/*******************************
+  vertical marquee movement
+*******************************/
+.studi-hero_marquee_col{
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.studi-hero_marquee_up{
+  .studi-hero_marquee_col{
+    animation: marquee-vertical 30s linear infinite;
+    @media screen and (max-width: 991px) {
+      animation: marquee-horizontal 30s linear infinite;
+    }
+  }
+}
+
+.studi-hero_marquee_down{
+  .studi-hero_marquee_col{
+    animation: marquee-vertical-alt 30s linear infinite;
+    @media screen and (max-width: 991px) {
+      animation: marquee-horizontal-alt 30s linear infinite;
+    }
+  }
+}
+
+
+@keyframes marquee-vertical {
+  from { transform: translateY(0); }
+  to { transform: translateY(calc(-100% - 20px)); }
+}
+
+@keyframes marquee-vertical-alt {
+  from { transform: translateY(calc(-100% - 20px)); }
+  to { transform: translateY(0%); }
+}
+
+@keyframes marquee-horizontal {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - 20px)); }
+}
+
+@keyframes marquee-horizontal-alt {
+  from { transform: translateX(calc(-100% - 20px)); }
+  to { transform: translateX(0%); }
+}
+
+.padding-section-medium.hero-padding{
+  @media screen and (min-width: 992px) and (max-width: 1300px) {
+    grid-column: 2/9;
+  }  
+}
+
+.studi-hero_marquee{
+  @media screen and (min-width: 992px) and (max-width: 1300px) {
+    grid-column: 9/full-end;
+  }  
+}

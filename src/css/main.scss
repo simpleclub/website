@@ -56,12 +56,13 @@ body { overscroll-behavior: none; }
   &::after {
     content: "";
     display: block; /* Forces the second part to a new line */
+    /* Tablet and Mobile: Remove the manual line break */
+    @media (max-width: 991px) { 
+      display: none; /* Keeps the content inline */
+    }
   }
 
-  /* Tablet and Mobile: Remove the manual line break */
-  @media (max-width: 991px) { 
-    display: inline; /* Keeps the content inline */
-  }
+
 }
 
 .line-break-tablet{
@@ -69,12 +70,12 @@ body { overscroll-behavior: none; }
   &::after {
     content: "";
     display: block; /* Forces the second part to a new line */
+    /* Tablet and Mobile: Remove the manual line break */
+    @media (max-width: 767px) { 
+      display: none; /* Keeps the content inline */
+    }
   }
 
-  /* Tablet and Mobile: Remove the manual line break */
-  @media (max-width: 767px) { 
-    display: inline; /* Keeps the content inline */
-  }
 }
 
 /***********************************************
