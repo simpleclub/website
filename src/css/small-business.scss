@@ -1,0 +1,17 @@
+@import 'components/hero-form';
+@import 'components/pricing/pricing-why';
+
+
+/**********************************
+  hero partners logo marquee
+***********************************/
+@keyframes hero-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 4.5rem)); /* match gap in the element */
+  }
+}
+
+

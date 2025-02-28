@@ -17,6 +17,7 @@ module.exports = {
     roiRechner: { import: './src/js/roiRechner.js' },
     studie: { import: './src/js/studie.js' },
     enterprise: { import: './src/js/enterprise.js' },
+    smallBusiness: { import: './src/js/smallBusiness.js' },
   }, 
   output: {
     clean: true,
