@@ -16,6 +16,7 @@ module.exports = {
     lernerlebnis: { import: './src/js/lernerlebnis.js' },
     roiRechner: { import: './src/js/roiRechner.js' },
     studie: { import: './src/js/studie.js' },
+    enterprise: { import: './src/js/enterprise.js' },
   }, 
   output: {
     clean: true,

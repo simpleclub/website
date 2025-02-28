@@ -1,0 +1,36 @@
+
+/*******************************
+  vertical marquee movement
+*******************************/
+.pricing-why_marquee_col_element{
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.pricing-why_marquee_col{
+  .pricing-why_marquee_col_element{
+    @media screen and (min-width: 991px) {
+      animation: marquee-vertical 30s linear infinite;
+    }
+  }
+}
+
+.pricing-why_marquee_col.col-2{
+  .pricing-why_marquee_col_element{
+    @media screen and (min-width: 991px) {
+      animation: marquee-vertical-alt 30s linear infinite;
+    }
+  }
+}
+
+
+@keyframes marquee-vertical {
+  from { transform: translateY(0); }
+  to { transform: translateY(calc(-100% - 20px)); }
+}
+
+@keyframes marquee-vertical-alt {
+  from { transform: translateY(calc(-100% - 20px)); }
+  to { transform: translateY(0%); }
+}
+
