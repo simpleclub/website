@@ -18,6 +18,7 @@ module.exports = {
     studie: { import: './src/js/studie.js' },
     enterprise: { import: './src/js/enterprise.js' },
     smallBusiness: { import: './src/js/smallBusiness.js' },
+    pricing: { import: './src/js/pricing.js' },
   }, 
   output: {
     clean: true,
