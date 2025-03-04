@@ -292,11 +292,19 @@
   }
 }
 
+.navbar{
+  @media screen and (min-width: 991px) and (max-width: 1200px){
+    grid-column-gap: 1.125rem;
+  }
+}
+
 .nav-menu{
+  @media screen and (min-width: 991px) and (max-width: 1200px){
+      grid-column-gap: 1.125rem;
+  }
   @media screen and (max-width: 991px){
     .nav-menu_dropdown-arrow path{
       stroke: #B3CBDB;
     }
   }
-  
 }

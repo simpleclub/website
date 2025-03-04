@@ -4,7 +4,6 @@ import '../../css/components/_wistiaVideos.scss'
   const wistiaPlayers = document.querySelectorAll("wistia-player");
   if (wistiaPlayers.length === 0) return; // Exit if no videos found
 
-  console.log('loaded');
 
   let scriptLoaded = false; // Track if main Wistia player.js is loaded
 
@@ -12,7 +11,6 @@ import '../../css/components/_wistiaVideos.scss'
     const mediaId = player.getAttribute("media-id");
     if (!mediaId) return; // Ensure media-id exists
 
-    console.log('media-id', mediaId);
 
     // Load Wistia player.js once
     if (!scriptLoaded) {
@@ -21,7 +19,6 @@ import '../../css/components/_wistiaVideos.scss'
       playerScript.src = "https://fast.wistia.com/player.js";
       playerScript.async = true;
       document.body.appendChild(playerScript);
-      console.log('skripta loadovana');
     }
 
     // Load the video-specific script
@@ -30,7 +27,6 @@ import '../../css/components/_wistiaVideos.scss'
     videoScript.async = true;
     videoScript.type = "module";
     document.body.appendChild(videoScript);
-    console.log('skripta za video');
   };
 
   // **Use IntersectionObserver to lazy load videos**
