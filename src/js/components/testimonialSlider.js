@@ -61,3 +61,55 @@ if (tabs.length > 0 && sliderWrappers.length > 0) {
     });
   });
 }
+
+
+// functionality for video testimonials
+// on play / pause we hide and show the play button and quote text
+function initWistiaVideoListeners() {
+
+  function handleVideo(video) {
+    const card = video.closest(".testimonial_slider-card");
+    if (!card) return;
+
+    const button = card.querySelector(".testimonial_slider-card_button");
+    const info = card.querySelector(".testimonial_slider-card_content_info");
+
+    if (!button || !info) return;
+
+    video.addEventListener("play", function () {
+      button.style.display = "none";
+      info.style.display = "none";
+    });
+
+    video.addEventListener("pause", function () {
+      button.style.display = "flex";
+      info.style.display = "flex";
+    });
+  }
+
+  // Check existing wistia-player elements
+  const wistiaVideos = document.querySelectorAll("wistia-player");
+  wistiaVideos.forEach(handleVideo);
+
+  // Observe DOM for dynamically added wistia-player elements
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      mutation.addedNodes.forEach((node) => {
+        if (node.nodeType === 1 && node.tagName.toLowerCase() === "wistia-player") {
+          handleVideo(node);
+        }
+      });
+    });
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  return function cleanup() {
+    observer.disconnect();
+  };
+}
+
+// Call function on page load
+initWistiaVideoListeners();
+
+
