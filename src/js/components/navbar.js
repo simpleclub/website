@@ -173,7 +173,7 @@ ScrollTrigger.create({
   onUpdate: (self) => {
     if (self.direction === 1 && self.scroll() > 100) {  
       // Scrolling down past 100px → Hide nav
-      nav.style.transform = "translateY(-100%)";
+      nav.style.transform = "translateY(-40px)";
       nav.style.transition = "transform 0.3s ease-out";
       nav.style.pointerEvents = "none"; // Disable interactions when hidden
     } else if (self.direction === -1 || self.scroll() <= 50) {
