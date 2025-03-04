@@ -113,3 +113,44 @@ function initWistiaVideoListeners() {
 initWistiaVideoListeners();
 
 
+////////////////////////////////////////////////////////////
+// editing quote text size based on the number of characters
+////////////////////////////////////////////////////////////
+function updateFontSize(element) {
+  if (element.textContent.length > 100) {
+    element.style.fontSize = "0.75rem";
+  } else {
+    element.style.fontSize = "1rem";
+  }
+}
+
+// Select the container where `.testimonial_slider_card-quote` elements are located
+const testimonialContainer = document.querySelector(".testimonial");
+
+// Run on existing `.testimonial_slider_card-quote` elements
+if (testimonialContainer) {
+  testimonialContainer.querySelectorAll(".testimonial_slider_card-quote").forEach(updateFontSize);
+  
+  // Set up an observer to monitor changes within `.testimonial`
+  const observer = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+      mutation.addedNodes.forEach(node => {
+        if (node.nodeType === 1) {
+          // Check if the added node is `.testimonial_slider_card-quote` or contains `.testimonial_slider_card-quote`
+          if (node.classList.contains("testimonial_slider_card-quote")) {
+            updateFontSize(node);
+          } else {
+            node.querySelectorAll(".testimonial_slider_card-quote").forEach(updateFontSize);
+          }
+        }
+      });
+    });
+  });
+
+  observer.observe(testimonialContainer, {
+    childList: true,
+    subtree: true, // Watches all nested elements inside `.testimonial`
+  });
+}
+
+
