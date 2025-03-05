@@ -175,12 +175,12 @@ ScrollTrigger.create({
       // Scrolling down past 100px → Hide nav
       nav.style.transform = "translateY(-40px)";
       nav.style.transition = "transform 0.3s ease-out";
-      nav.style.pointerEvents = "none"; // Disable interactions when hidden
+     // nav.style.pointerEvents = "none"; // Disable interactions when hidden
     } else if (self.direction === -1 || self.scroll() <= 50) {
       // Scrolling up OR back near the top → Show nav
       nav.style.transform = "unset";
       nav.style.transition = "transform 0.3s ease-out";
-      nav.style.pointerEvents = "auto"; // Re-enable interactions when visible
+     // nav.style.pointerEvents = "auto"; // Re-enable interactions when visible
     }
   }
 });
