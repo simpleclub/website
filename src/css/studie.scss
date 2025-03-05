@@ -9,18 +9,18 @@
 
 .studi-hero_marquee_up{
   .studi-hero_marquee_col{
-    animation: marquee-vertical 30s linear infinite;
+    animation: marquee-vertical 50s linear infinite;
     @media screen and (max-width: 991px) {
-      animation: marquee-horizontal 30s linear infinite;
+      animation: marquee-horizontal 50s linear infinite;
     }
   }
 }
 
 .studi-hero_marquee_down{
   .studi-hero_marquee_col{
-    animation: marquee-vertical-alt 30s linear infinite;
+    animation: marquee-vertical-alt 50s linear infinite;
     @media screen and (max-width: 991px) {
-      animation: marquee-horizontal-alt 30s linear infinite;
+      animation: marquee-horizontal-alt 50s linear infinite;
     }
   }
 }
