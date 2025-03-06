@@ -8,9 +8,9 @@ accordions.forEach(accordion => {
       if (e.currentTarget.classList.contains('open')) {
         e.currentTarget.classList.remove('open');
       } else {
-        items.forEach(el => {
-          el.classList.remove('open');
-        });
+        // items.forEach(el => {
+        //   el.classList.remove('open');
+        // });
         e.currentTarget.classList.add('open');
       }
     });
