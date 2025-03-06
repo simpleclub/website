@@ -18,6 +18,10 @@ if (sliders.length > 0) {
     const wrapper = slider.querySelector(".swiper-wrapper");
     const slides = slider.querySelectorAll(".swiper-slide");
 
+    const parentWrapper = slider.closest(".testimonial_slider-wrapper");
+    const nextButton = parentWrapper.querySelector(".testimonials_slider-next");
+    const prevButton = parentWrapper.querySelector(".testimonials_slider-prev");
+
     if (!wrapper || slides.length === 0) {
       console.warn("Swiper structure is missing in:", slider);
       return; // Skip initializing Swiper for this slider
@@ -35,8 +39,8 @@ if (sliders.length > 0) {
         },
       },
       navigation: {
-        nextEl: ".testimonials_slider-next",
-        prevEl: ".testimonials_slider-prev",
+        nextEl: nextButton,
+        prevEl: prevButton,
       },
     });
   });
