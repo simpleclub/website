@@ -19,8 +19,8 @@ if (sliders.length > 0) {
     const slides = slider.querySelectorAll(".swiper-slide");
 
     const parentWrapper = slider.closest(".testimonial_slider-wrapper");
-    const nextButton = parentWrapper.querySelector(".testimonials_slider-next");
-    const prevButton = parentWrapper.querySelector(".testimonials_slider-prev");
+    const nextButton = parentWrapper.querySelector(".testimonial_slider-next");
+    const prevButton = parentWrapper.querySelector(".testimonial_slider-prev");
 
     if (!wrapper || slides.length === 0) {
       console.warn("Swiper structure is missing in:", slider);
