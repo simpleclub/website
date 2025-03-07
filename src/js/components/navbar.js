@@ -167,19 +167,26 @@ gsap.registerPlugin(ScrollTrigger);
 
 const nav = document.querySelector(".nav");
 
+
 ScrollTrigger.create({
   start: "top top", // Start tracking from the top
   end: "bottom bottom",
   onUpdate: (self) => {
     if (self.direction === 1 && self.scroll() > 100) {  
       // Scrolling down past 100px → Hide nav
-      nav.style.transform = "translateY(-40px)";
-      nav.style.transition = "transform 0.3s ease-out";
+      nav.style.top = "-40px";
+      nav.style.transition = "0.3s ease-out";
+      dropWrappers.forEach(wrapper => {
+        wrapper.style.top = "88px";
+      });
      // nav.style.pointerEvents = "none"; // Disable interactions when hidden
     } else if (self.direction === -1 || self.scroll() <= 50) {
       // Scrolling up OR back near the top → Show nav
-      nav.style.transform = "unset";
-      nav.style.transition = "transform 0.3s ease-out";
+      nav.style.top = "0px";
+      nav.style.transition = "0.3s ease-out";
+      dropWrappers.forEach(wrapper => {
+        wrapper.style.top = "128px";
+      });
      // nav.style.pointerEvents = "auto"; // Re-enable interactions when visible
     }
   }
