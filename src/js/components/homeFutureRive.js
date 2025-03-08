@@ -159,7 +159,6 @@ function setAnimation4(value) {
 ///////////
 
 document.querySelectorAll(".rive-control-btn").forEach(button => {
-    console.log('aaaa')
     button.addEventListener("click", function () {
         const parentContainer = this.closest(".home-future_slide_controls");
 
