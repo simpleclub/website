@@ -154,3 +154,23 @@ function setAnimation4(value) {
         }
     }
 }
+
+
+///////////
+
+document.querySelectorAll(".rive-control-btn").forEach(button => {
+    console.log('aaaa')
+    button.addEventListener("click", function () {
+        const parentContainer = this.closest(".home-future_slide_controls");
+
+        if (!parentContainer) return; // Safety check
+
+        // Remove "arrow-button-rive" class from all buttons inside this container
+        parentContainer.querySelectorAll(".rive-control-btn").forEach(btn => {
+            btn.classList.remove("active-button");
+        });
+
+        // Add "active-button" class to the clicked button
+        this.classList.add("active-button");
+    });
+});
