@@ -21,7 +21,7 @@ function animateNumbers(el) {
     duration: 2,
     ease: "power1.out",
     onUpdate: function () {
-      el.textContent = `${formatNumber(Math.round(obj.value))} +`;
+      el.textContent = `${formatNumber(Math.round(obj.value))}+`;
     }
   });
 }
