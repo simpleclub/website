@@ -52,7 +52,7 @@ const createAnimations = () => {
   // GSAP animation for the logo
   gsap.fromTo(
     circleLogo,
-    { opacity: 0, x: 0 },
+    { opacity: 0 },
     {
       opacity: 1,
       duration: 3, // Fixed duration
