@@ -1,0 +1,13 @@
+.footer:has(.footer_link:hover){
+  .footer_link:not(:hover),
+  .footer_arrow-link:not(:hover){
+    color: #B3CBDB;
+  }
+} 
+
+.footer:has(.footer_arrow-link:hover){
+  .footer_link:not(:hover),
+  .footer_arrow-link:not(:hover){
+    color: #B3CBDB;
+  }
+} 

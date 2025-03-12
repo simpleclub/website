@@ -1,6 +1,7 @@
 
 // CSS import
 import '../css/main.scss'
+import '../css/components/_footer.scss'
 
 // JavaScript import
 import './components/navbar.js'

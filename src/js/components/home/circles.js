@@ -71,3 +71,5 @@ createAnimations();
 
 // Recreate animations on resize for responsiveness
 window.addEventListener("resize", createAnimations);
+
+
