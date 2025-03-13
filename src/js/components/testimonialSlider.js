@@ -27,6 +27,12 @@ if (sliders.length > 0) {
       return; // Skip initializing Swiper for this slider
     }
 
+    // Hide navigation buttons if there are 3 or fewer slides on larger screens
+    if (slides.length <= 3 && window.innerWidth > 991) {
+      nextButton.style.display = "none";
+      prevButton.style.display = "none";
+    }
+
     new Swiper(slider, {
       modules: [Navigation],
       loop: true,
