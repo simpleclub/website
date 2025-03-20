@@ -19,6 +19,7 @@ module.exports = {
     enterprise: { import: './src/js/enterprise.js' },
     smallBusiness: { import: './src/js/smallBusiness.js' },
     pricing: { import: './src/js/pricing.js' },
+    components: { import: './src/js/components.js' },
   }, 
   output: {
     clean: true,
